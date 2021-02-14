@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    environment {
+        NEW_VERSION = "1.0.0"
+        SERVER_CREDENTIALS = credentials('id-of-credential')
+    }
 
     stages {
         stage("build") {
@@ -16,7 +20,7 @@ pipeline {
 
         stage("deploy") {
             steps {
-                echo "testing..."
+                echo "deploying ${NEW_VERSION}"
             }
         }
     }
