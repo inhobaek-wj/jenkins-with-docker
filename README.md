@@ -28,6 +28,8 @@
       - Global: Everywhere accessible.
       - Project: Limited to project, ONLY with multibranch pipeline, folder -> enables to organize build jobs in folders.
     - 상황에 맞게 global 또는 project scope으로 만들면 된다.
+
+3. Jenkinsfile을 만들자. (Jenkinsfile-sample 참고)
   
 ## Reference
 https://youtube.com/playlist?list=PLy7NrYWoggjw_LIiDK1LXdNN82uYuuuiC
