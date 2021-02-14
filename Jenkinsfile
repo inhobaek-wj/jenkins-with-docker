@@ -20,4 +20,19 @@ pipeline {
             }
         }
     }
+
+    // execute some logic AFTER all stages executed.
+    post {
+        always {
+
+        }
+
+        success {
+
+        }
+
+        failure {
+
+        }
+    }
 }
