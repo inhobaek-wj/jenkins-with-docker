@@ -21,6 +21,15 @@ pipeline {
         stage("deploy") {
             steps {
                 echo "deploying ${NEW_VERSION}"
+
+                // Credentials Bindings plugin 필요.
+                withCredentials([
+                    usernamePassword(credentials: 'id-of-credential', 
+                                     usernameVariable: USER, 
+                                     passwordVariable: PWD)
+                ]) {
+                    sh "some script ${USER} ${PWD}"
+                }
             }
         }
     }
