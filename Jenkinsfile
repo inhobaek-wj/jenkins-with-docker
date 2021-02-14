@@ -4,6 +4,12 @@ pipeline {
         NEW_VERSION = "1.0.0"
         SERVER_CREDENTIALS = credentials('id-of-credential')
     }
+    tools {
+        // 오직 아래 3개만 사용 가능. 나머진 따로 설치/설정이 필요.
+        // maven
+        // gradle
+        // jdk
+    }
 
     stages {
         stage("build") {
